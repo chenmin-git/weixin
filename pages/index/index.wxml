@@ -8,6 +8,11 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">请先登录</text>
+    <open-data type="userNickName"></open-data>
+    <open-data type="userAvatarUrl" id="touxiang"></open-data>
+    <text class="user-motto">{{name}}</text>
+    <view wx:for="{{likes}}">{{item.id}} ---- {{item.name}}</view>
+    <view>{{count}}</view>
+    <button bindtap="add" size="mini">+</button><button bindtap="sub" size="mini">-</button>
   </view>
 </view>
