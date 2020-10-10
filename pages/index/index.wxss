@@ -19,9 +19,26 @@
 .usermotto {
   margin-top: 200px;
 }
-button{
-  background-color: red;
-}
 #touxiang{
   width: 20px;
+}
+.inputs{
+  border:1px solid #666;
+  border-radius: 5px;
+
+}
+.bangDing{
+  line-height: 60px;
+  text-align: center;
+  vertical-align: middle;
+}
+#send{
+  height: 50rpx;
+  width:160rpx;  
+  display: inline-block;
+  font-size:10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: green;
 }

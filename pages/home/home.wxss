@@ -1,0 +1,11 @@
+/* pages/home/home.wxss */
+#shangchan{
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 80px;
+  background-color: #566cf5;
+  bottom: 60rpx;
+  position: absolute;
+  right: 60rpx;
+}

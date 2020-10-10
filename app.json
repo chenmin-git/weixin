@@ -1,31 +1,37 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/tiao/tiao",
+    "pages/home/home",
+    "pages/faqi",
+    "pages/faqi/faqi"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#EF5779",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#566cf5",
     "navigationBarTitleText": "RICH",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh":true,
-    "backgroundColor": "#f00"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#000"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "static/首页.png",
-      "selectedIconPath": "static/首页2.png"
-    },
-    {
-      "pagePath": "pages/me/me",
-      "text": "我的",
-      "iconPath": "static/我的.png",
-      "selectedIconPath": "static/我的2.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "环境圈",
+        "iconPath": "static/首页.png",
+        "selectedIconPath": "static/首页2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "static/我的.png",
+        "selectedIconPath": "static/我的2.png"
+      }
+    ]
   }
 }

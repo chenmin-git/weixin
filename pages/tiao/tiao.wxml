@@ -1,0 +1,3 @@
+<!--pages/tiao/tiao.wxml-->
+<navigator open-type="navigateBack">返回</navigator>
+<text>pages/tiao/tiao.wxml</text>

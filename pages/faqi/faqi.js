@@ -1,25 +1,18 @@
-// pages/me/me.js
-const app = getApp()
+// pages/faqi/faqi.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:{}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showTabBar({
-      animation: true,
-    })
-    console.log("usreInfo",app.globalData.userInfo)
-    this.setData({
-      userInfo:app.globalData.userInfo
-    })
+
   },
 
   /**
@@ -69,21 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  touxiang(){
-    var this_1 = this;
-    console.log('点击了按钮')
-    wx.chooseImage({
-      count: 0,
-      success:function(res){
-        console.log(res)
-        
-      }
-    })
-  },
-  faqi(){
-    wx.navigateTo({
-      url: '/pages/faqi/faqi'
-    })
   }
 })

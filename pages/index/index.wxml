@@ -1,18 +1,30 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权微信登录 </button>
+  <button bindtap="wxShouQuan" wx:if="{{show}}" wx:if="{{show}}">微信授权</button>
+  <view class="userinfo bangDing">
+  
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权微信登录 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}的小程序</text>
-    </block>
+    </block> -->
+  <block  wx:if="{{!show}}" >
+    <text style="font-size:30px">请绑定信息</text>
+    <view>姓名：<input type="text" maxlength="6" class="inputs" model:value="{{username}}" style=" display: inline-block" /></view>
+    <view>手机：<input maxlength="11" type="text" class="inputs" model:value="{{phone}}" style=" display: inline-block" /></view>
+    <view>验证：<input maxlength="4" type="text" class="inputs" model:value="{{yzm}}" style="width:200rpx;  display: inline-block" /><button type="mini" bindtap="getPhone" id="send">验证</button></view>
+   
+     <view style="height:20rpx"> </view>
+    <view><button bindtap="info" style="background-color:green;color:white;width:400rpx">绑定</button></view>
+  </block>
   </view>
-  <view class="usermotto">
+  <!-- <view class="usermotto">
     <open-data type="userNickName"></open-data>
     <open-data type="userAvatarUrl" id="touxiang"></open-data>
     <text class="user-motto">{{name}}</text>
     <view wx:for="{{likes}}">{{item.id}} ---- {{item.name}}</view>
     <view>{{count}}</view>
     <button bindtap="add" size="mini">+</button><button bindtap="sub" size="mini">-</button>
-  </view>
+    
+  </view> -->
 </view>
