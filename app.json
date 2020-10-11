@@ -5,8 +5,8 @@
     "pages/me/me",
     "pages/tiao/tiao",
     "pages/home/home",
-    "pages/faqi",
-    "pages/faqi/faqi"
+    "pages/faqi/faqi",
+    "pages/add/add"
   ],
   "window": {
     "backgroundTextStyle": "light",

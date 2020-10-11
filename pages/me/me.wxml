@@ -4,7 +4,8 @@
   <view><open-data type="userNickName" ></open-data></view>
 </view>
  
-<view style="background-color:#eee;height:50px;line-height:50px;font-weight: bold;" bindtap="faqi">
-  <view> 我发起的 <block id="jiantou">{{'>'}}</block></view>
+<view style="background-color:#eee;height:40px;line-height:50px;font-weight: 300;position: relative" bindtap="faqi">
+  <image src="/static/shijian.png" mode="aspectFit" style="width:32px;height:32px; position: relative;top:5px"/> 我发起的
+  <view style="position:absolute;right:20px;top:0;font-weight:bold">{{'>'}}</view>
 </view>
  

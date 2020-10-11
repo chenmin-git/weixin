@@ -1,2 +1,9 @@
 <!--pages/faqi/faqi.wxml-->
-<text>pages/faqi/faqi.wxml</text>
+<view style="text-align:center">
+<!-- <image src="{{images}}" style="width:200px;height:200px;background:red" mode="aspectFit"></image> -->
+<view wx:for="{{events}}" wx:for-item="event" style="display:inline-block;margin-top:20px;border-radius:10px;border:2px solid #566cf5">
+<view style="margin: 5px 0; width:200px;">{{event.eventDesc}}</view>
+<image src="{{event.photo}}" data-id="{{event.id}}" data-index="{{index}}" bindload="imagesLoad" style="width:200px;height:200px;" mode="aspectFit"></image>
+<view style="margin-bottom:4px;background:#ccc;border-radius:20px;text-align:center"><image src="/static/ditu.png" style="width:16px;height:16px;" mode="aspectFit"></image>{{event.reportingLocation}}</view>
+</view>
+</view>

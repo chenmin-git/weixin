@@ -1,0 +1,19 @@
+<!--pages/add/add.wxml-->
+<view style="text-align:center">
+  <view style="margin-top:30px;"> 
+    位置:
+    <input model:value="{{weizhi}}" tyte="text" style="text-align:left;border:1px solid #333;width:150px;padding:10px;border-radius:10px;display: inline-block;position: relative;top:6px" maxlength="15"/>
+    <button bindtap="chooseLocation" size="mini" style="font-size:13px;position: relative;top:4px;color:#000;width:32;height:32px;"><image src="/static/ditu.png" style="width:32px;height:32px"/></button>
+  </view>
+  <view style="margin-top:30px; vertical-align: top;">
+    描述:
+    <textarea maxlength="30"model:value="{{miaoshu}}"
+    style="text-align:left;border:1px solid #333;width:200px;border-radius:15px;display: inline-block;position: relative;top:6px;height:70px;padding:10px;"></textarea>
+  </view>
+  <view style="margin-top:30px">
+    上传文件:<button bindtap="chooseImage" size="mini" style="font-size:13px;position: relative;top:4px;background:green;color:white">选择图片</button>
+
+  </view>
+  <image src="{{imgUrl}}" mode="aspectFit" style="width:150px;height:150px;border:1px solid #333;border-radius:20px;"/>
+  <button style="width:80%;background:green;color:white;margin-top:30px;" bindtap="tijiao">提交</button>
+</view>

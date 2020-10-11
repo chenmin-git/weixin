@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+import location from '../../location/location'
 
 Page({
   data: {
@@ -51,14 +51,15 @@ Page({
             })
             console.log("code"+this.data.code)
             wx.request({
-              url: 'http://192.168.43.70:7070/wechat/index?code='+this_1.data.code,
+              url: location.baseUrl+'/wechat/index?code='+this_1.data.code,
               success:res2=>{
+                console.log("session",res2.data.data)
+                wx.setStorageSync('sessionKey', res2.data.data)
                 if(res2.data.status == 200){
                   wx.reLaunch({
                     url: '../home/home',
                   })
                 }else if(res2.data.status == 400){
-                  console.log("data",res2.data.data)
                   this_1.setData({
                     wx_id:res2.data.data
                   })
@@ -81,7 +82,7 @@ Page({
     var this_1 = this;
     console.log("codes",this.data.code)
     wx.request({
-      url: 'http://192.168.43.70:7070/wechat/fillInfo?username='+this.data.username+"&phone="+this.data.phone+"&wx_id="+this.data.wx_id+"&code="+this.data.code,
+      url: location.baseUrl+'/wechat/fillInfo?username='+this.data.username+"&phone="+this.data.phone+"&wx_id="+this.data.wx_id+"&code="+this.data.code,
       method:'POST',
       success(res)
       {
@@ -89,6 +90,7 @@ Page({
           wx.switchTab({
             url: '/pages/home/home',
           })
+          console.log(res.data.data)
           console.log('绑定成功')
           this_1.setData({
             phone : '',
@@ -104,7 +106,7 @@ Page({
   },
   getPhone(){
     wx.request({
-      url: 'http://192.168.43.70:7070/getPhone?phone='+this.data.phone,
+      url: location.baseUrl+'/getPhone?phone='+this.data.phone,
       success:res2=>{
         console.log(res2)
         if(res2.data.status == 200){
